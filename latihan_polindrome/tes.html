@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="https://i.ibb.co/sjwVT6p/Artboard-1-300x.png" sizes="16x16" />
+    <title>Periksa Mandiri | Risiko Covid-19</title>
+
+    <style>
+      body {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-family: "Montserrat", sans-serif;
+        background-color: #ffffff;
+      }
+
+      .btn-green {
+        background-color: #5aa7a7;
+        border-color: #5aa7a7;
+        border-width: 2px;
+        font-weight: bold;
+        color: white;
+        border-radius: 1;
+      }
+
+      .btn-green:hover,
+      .btn-green:active,
+      .btn-green:focus,
+      .btn-green.active {
+        background: white;
+        color: #5aa7a7;
+        border-color: #5aa7a7;
+      }
+
+      .border-3 {
+        border-color: #5aa7a7 !important;
+        border-width: 2px !important;
+        background-color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-sm pt-sm-5 pb-sm-5" style="background-color: #5aa7a7">
+      <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-auto border-right">
+              <img src="https://i.ibb.co/sjwVT6p/Artboard-1-300x.png" alt="logo" style="width: 50px" />
+            </div>
+            <div class="col-sm-auto border-right" style="font-weight: lighter; color: white; font-size: 100%">
+              UNIT PELAKSANA TEKNIS KESELAMATAN,
+              <p>KESEHATAN KERJA DAN LINGKUNGAN (K3L)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm"></div>
+      </div>
+    </div>
+    <div class="container-sm border border-3 p-sm-5">
+      <br />
+      <div class="row">
+        <div class="col-sm">
+          <h2 style="text-align: center">
+            <b>Penilaian Mandiri Risiko COVID-19</b>
+          </h2>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-sm">
+          <h4>Isi data diri Anda.</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group" id="nameform">
+                  <label for="name" class="form-label">Nama Lengkap :</label>
+                  <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap anda" required />
+                  <div class="invalid-feedback">Mohon isi kolom ini.</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group" id="nipform">
+                  <label for="nip" class="form-label">NIP :</label>
+                  <input type="number" class="form-control" id="nip" placeholder="Masukkan NIP anda" required />
+                  <div class="invalid-feedback">Mohon isi kolom ini.</div>
+                </div>
+              </div>
+            </div>
+            <div class="row" id="selectsex">
+              <div class="col-sm">
+                <label for="sex">Jenis kelamin:</label>
+                <br />
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" value="m" name="optsex" id="sexm" required />
+                  <label class="form-check-label" for="sexm">Pria</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" value="f" name="optsex" id="sexf" required />
+                  <label class="form-check-label" for="sexf">Wanita</label>
+                  <div class="invalid-feedback" style="margin-left: 16px">Mohon pilih opsi ini.</div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm">
+                <h4>Demi kesehatan dan keselamatan bersama, kami mohon Anda untuk menjawab pertanyaan ini secara jujur.</h4>
+              </div>
+            </div>
+            <br />
+            <div class="row" id="q1">
+              <div class="col-sm">
+                <label for="q1">1. Dalam 14 hari terakhir, apakah Anda pernah bepergian ke tempat umum atau tempat keramaian (misalnya pasar,fasilitas pelayanan kesehatan, dll)?</label>
+                <br />
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq1" id="optq1y" value="true" required />
+                  <label class="form-check-label" for="optq1y">Ya</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq1" id="optq1n" value="false" required />
+                  <label class="form-check-label" for="optq1n">Tidak</label>
+                  <div class="invalid-feedback" style="margin-left: 16px">Mohon pilih opsi ini.</div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row" id="q2">
+              <div class="col-sm">
+                <label for="q2">2. Dalam 14 hari terakhir, apakah Anda pernah menggunakan transportasi umum?</label>
+                <br />
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq2" id="optq2y" value="true" required />
+                  <label class="form-check-label" for="optq2y">Ya</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq2" id="optq2n" value="false" required />
+                  <label class="form-check-label" for="optq12n">Tidak</label>
+                  <div class="invalid-feedback" style="margin-left: 16px">Mohon pilih opsi ini.</div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row" id="q3">
+              <div class="col-sm">
+                <label for="q3">3. Dalam 14 hari terakhir, apakah Anda pernah melakukan perjalanan ke luar kota atau ke luar negeri?</label>
+                <br />
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq3" id="optq3y" value="true" required />
+                  <label class="form-check-label" for="optq3y">Ya</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq3" id="optq3n" value="false" required />
+                  <label class="form-check-label" for="optq3n">Tidak</label>
+                  <div class="invalid-feedback" style="margin-left: 16px">Mohon pilih opsi ini.</div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row" id="q4">
+              <div class="col-sm">
+                <label for="q4">4. Dalam 14 hari terakhir, apakah Anda mengikuti kegiatan yang melibatkan banyak orang?</label>
+                <br />
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq4" id="optq4y" value="true" required />
+                  <label class="form-check-label" for="optq4y">Ya</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq4" id="optq4n" value="false" required />
+                  <label class="form-check-label" for="optq4n">Tidak</label>
+                  <div class="invalid-feedback" style="margin-left: 16px">Mohon pilih opsi ini.</div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row" id="q5">
+              <div class="col-sm">
+                <label for="q5"
+                  >5. Dalam 14 hari terakhir, apakah Anda memiliki riwayat kontak erat(misalnya berjabat tangan, berbicara, atau berada dalam satu ruangan/satu rumah) dengan orang yang dinyatakan sebagai Orang Dalam Pemantauan (ODP) atau
+                  Pasien Dalam Pengawasan (PDP) atau pasien positif Covid-19?</label
+                >
+                <br />
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq5" id="optq5y" value="true" required />
+                  <label class="form-check-label" for="optq5y">Ya</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq5" id="optq5n" value="false" required />
+                  <label class="form-check-label" for="optq5n">Tidak</label>
+                  <div class="invalid-feedback" style="margin-left: 16px">Mohon pilih opsi ini.</div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row" id="q6">
+              <div class="col-sm">
+                <label for="q6">6. Dalam 14 hari terakhir, apakah Anda pernah mengalami demam/batuk/pilek/sakit tenggorokan/sesak napas ?</label>
+                <br />
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq6" id="optq6y" value="true" required />
+                  <label class="form-check-label" for="optq6y">Ya</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="optq6" id="optq6n" value="false" required />
+                  <label class="form-check-label" for="optq6n">Tidak</label>
+                  <div class="invalid-feedback" style="margin-left: 16px">Mohon pilih opsi ini.</div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <form></form>
+            <div class="row">
+              <div class="col">
+                <button type="submit" class="btn btn-green" id="btnsubmit">Lihat hasil</button>
+              </div>
+            </div>
+            <script>
+              (function () {
+                "use strict";
+                var forms = document.querySelectorAll(".needs-validation");
+                Array.prototype.slice.call(forms).forEach(function (form) {
+                  form.addEventListener(
+                    "submit",
+                    function (event) {
+                      if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                      }
+
+                      form.classList.add("was-validated");
+                    },
+                    false
+                  );
+                });
+              })();
+              $(document).ready(function () {
+                $("#btnsubmit").click(function () {
+                  var name = $("#name").val();
+                  var nip = $("#nip").val();
+                  var sex = $("#selectsex input:radio:checked").val();
+                  var spc = name.indexOf(" ");
+                  var lname = name.substring(spc, name.length);
+                  $("#lname").text(lname);
+                  const ansList = [];
+                  var q1 = $("#q1 input:radio:checked").val();
+                  ansList.push(q1);
+                  var q2 = $("#q2 input:radio:checked").val();
+                  ansList.push(q2);
+                  var q3 = $("#q3 input:radio:checked").val();
+                  ansList.push(q3);
+                  var q4 = $("#q4 input:radio:checked").val();
+                  ansList.push(q4);
+                  var q5 = $("#q5 input:radio:checked").val();
+                  ansList.push(q5);
+                  var q6 = $("#q6 input:radio:checked").val();
+                  ansList.push(q6);
+                  var score = 0;
+                  ansList.forEach((x) => {
+                    if (x == "true") {
+                      score++;
+                    }
+                  });
+                  if (sex == "m") {
+                    $("#adr").text("Saudara ");
+                  } else {
+                    $("#adr").text("Saudari ");
+                  }
+                  if (score >= 5) {
+                    $("#risk").text("Risiko Tinggi");
+                  } else if (score >= 1) {
+                    if (ansList[4] == "true" || ansList[5] == "true") {
+                      $("#risk").text("Risiko Tinggi");
+                    } else {
+                      $("#risk").text("Risiko Sedang");
+                    }
+                  } else {
+                    $("#risk").text("Risiko Rendah");
+                  }
+                  if (name != "" && nip != "" && sex != null && q1 != null && q2 != null && q3 != null && q4 != null && q5 != null && q6 != null) {
+                    $("html, body").animate({ scrollTop: $("html, body").get(0).scrollHeight }, 10);
+                    $("#ans").slideDown();
+                  }
+                  if (name == "") {
+                    $("#nameform .invalid-feedback").show();
+                    $("#ans").hide();
+                  }
+                  if (nip == "") {
+                    $("#nipform .invalid-feedback").show();
+                    $("#ans").hide();
+                  }
+                  if (sex == null) {
+                    $("#selectsex .invalid-feedback").show();
+                    $("#ans").hide();
+                  }
+                  if (q1 == null) {
+                    $("#q1 .invalid-feedback").show();
+                    $("#ans").hide();
+                  }
+                  if (q2 == null) {
+                    $("#q2 .invalid-feedback").show();
+                    $("#ans").hide();
+                  }
+                  if (q3 == null) {
+                    $("#q3 .invalid-feedback").show();
+                    $("#ans").hide();
+                  }
+                  if (q4 == null) {
+                    $("#q4 .invalid-feedback").show();
+                    $("#ans").hide();
+                  }
+                  if (q5 == null) {
+                    $("#q5 .invalid-feedback").show();
+                    $("#ans").hide();
+                  }
+                  if (q6 == null) {
+                    $("#q6 .invalid-feedback").show();
+                    $("#ans").hide();
+                  }
+                });
+              });
+            </script>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="ans">
+      <div class="row">
+        <script>
+          $(document).ready(function () {
+            $("#ans").hide();
+          });
+        </script>
+        <div class="col-sm">
+          <hr />
+          <h4>Hasil kalkukasi risiko <span id="adr"></span> <span id="lname"></span> adalah :</h4>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-sm">
+          <h3 id="risk" style="font-weight: bold; color: #5aa7a7"></h3>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-sm">
+          <h7><b>Tindak Lanjut:</b></h7>
+          <p>
+            <b>Risiko Rendah dan Sedang,</b> diperbolehkan masuk kerja, namun dilakukan[s_EPJpemeriksaan suhu di pintu masuk tempat kerja. Apabila suhu tubuh terukur >37,3C perlu dilakukan investigasi dan pemeriksaan oleh petugas kesehatan.
+            Jika dipastikan pekerja tidak memenuhi kriteria OTG,ODP atau PDP. Pekerja dapatmasuk bekerja
+          </p>
+          <p><b>Risiko Tinggi,</b> dilakukan investigasi dan tidak diperkenankan masuk bekerja. Pekerja dilakukan pemeriksaan RT-PCR, jika tidak tersedia dapat dilakukan Rapid Test oleh petugas kesehatan /fasyankessetempat</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          Untuk informasi tes terdekat klik
+          <a href="https://www.halodoc.com/cari-dokter/bekasi/spesialis/pcr-test?gclid=CjwKCAjw7--KBhAMEiwAxfpkWAGwiXdyPKbRtysWFQrUB2-Z5MhAsgMAGGQghFhGX37DYPZAosZ8PRoCTGgQAvD_BwE">disini</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
